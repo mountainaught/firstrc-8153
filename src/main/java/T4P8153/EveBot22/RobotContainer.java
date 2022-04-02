@@ -61,7 +61,7 @@ public class RobotContainer {
     arm = new Arm();
     intake = new Intake();
 
-    driveTrain.setDefaultCommand(new arcadeDrive(driveTrain, () -> Deadband(js.getRawAxis(1)) * 1.5,
+    driveTrain.setDefaultCommand(new arcadeDrive(driveTrain, () -> js.getRawAxis(4), () -> js.getRawAxis(3),
       () -> Deadband(js.getRawAxis(2))  / driveSpeed ) );
 
     // Configure the JoystickButton bindings
