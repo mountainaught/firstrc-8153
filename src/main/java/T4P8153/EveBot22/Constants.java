@@ -25,6 +25,8 @@ public final class Constants {
     public static final double hangerSpeed = 0.7;
     public static final double tilterSpeed = 0.7;
 
+    public static final int test = 31;
+
     public static final double driveSpeed = 1.2;
 
 }
