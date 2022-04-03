@@ -61,8 +61,10 @@ public class RobotContainer {
     arm = new Arm();
     intake = new Intake();
 
-    driveTrain.setDefaultCommand(new arcadeDrive(driveTrain, () -> js.getRawAxis(4), () -> js.getRawAxis(3),
-      () -> Deadband(js.getRawAxis(2))  / driveSpeed ) );
+    driveTrain.setDefaultCommand(new arcadeDrive(driveTrain, () -> js.getRawAxis(3), () -> js.getRawAxis(4),
+      () -> Deadband(js.getRawAxis(0))  / driveSpeed ) );
+
+    arm.setDefaultCommand(new armSpin(arm, () -> js.getRawAxis(5)));
 
     // Configure the JoystickButton bindings
     configureJoystickButtonBindings();
@@ -86,7 +88,7 @@ public class RobotContainer {
     // Intake - R1/R2
     new JoystickButton(js, 6)
       .whenHeld(new intakeSpin(intake, false));
-    new JoystickButton(js, 8)
+    new JoystickButton(js, 5)
       .whenHeld(new intakeSpin(intake, true));
 
     new JoystickButton(js, 3)
@@ -94,10 +96,13 @@ public class RobotContainer {
     new JoystickButton(js, 1)
       .whenHeld(new tilterSpin(tilter, true));
 
+    /*
     new JoystickButton(js, 5)
       .whenHeld(new armSpin(arm, false));
     new JoystickButton(js, 7)
       .whenHeld(new armSpin(arm, true));
+    */
+    
 
   }
 
