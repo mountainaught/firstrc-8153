@@ -21,12 +21,12 @@ public final class Constants {
     public static final int victor_Tilter = 5;
 
     public static final double armSpeed = 0.55;
-    public static final double intakeSpeed = -0.40;
+    public static final double intakeSpeed = -1.10;
     public static final double hangerSpeed = 0.7;
     public static final double tilterSpeed = 0.7;
 
     public static final int test = 31;
 
-    public static final double driveSpeed = 1.2;
+    public static final double driveSpeed = 1.3;
 
 }
